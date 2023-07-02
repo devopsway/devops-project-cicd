@@ -3,6 +3,27 @@
 ## Jenkins Plugin requirements
 - Docker Plugin: https://plugins.jenkins.io/docker-plugin/
 
+## Remote server config
+- On remote server (apllication server). Comment these line:
+- **from**
+```shell
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+```
+- **to**
+
+```shell
+# If not running interactively, don't do anything
+#case $- in
+#    *i*) ;;
+#      *) return;;
+#esac
+```
+
+
 ## Setup manual
 
 1. Generate SSH key and add to remote(application server)
