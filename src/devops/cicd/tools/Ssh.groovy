@@ -11,7 +11,7 @@ def prepare() {
 
 def executeCommand(hostname, command, username = "cicd") {
     return sh(
-        script: "ssh -o StrictHostKeyChecking=no ${username}@${hostname} -- ${command}",
+        script: "ssh -i ssh_key -o StrictHostKeyChecking=no ${username}@${hostname} -- ${command}",
         returnStdout: true
     )
 }
