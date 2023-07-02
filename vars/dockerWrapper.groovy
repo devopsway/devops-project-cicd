@@ -6,6 +6,7 @@ def call() {
             def ssh = new Ssh()
             ssh.prepare()
             def ret = ssh.executeCommand("34.126.122.163", "pwd", "vagrant")
+            println(ret)
         }
     }
 }
