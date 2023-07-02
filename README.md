@@ -1,5 +1,8 @@
 # devops-project-cicd
 
+## Jenkins Plugin requirements
+- Docker Plugin: https://plugins.jenkins.io/docker-plugin/
+
 ## Setup manual
 
 1. Generate SSH key and add to remote(application server)
