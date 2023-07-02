@@ -7,6 +7,7 @@ def getSshKeyPath() {
         def text = readFile(FILE)
         writeFile(file: 'ssh-key', text: text)
     }
+    sh "cat ssh-key"
 }
 
 def executeCommand(hostname, command, username = "cicd") {
