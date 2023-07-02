@@ -21,5 +21,5 @@ def call() {
 }
 
 def executeDir(dir, command) {
-    return "'cd ${dir} && ${command}'"
+    return "'. ~/.bash_profile;cd ${dir} && ${command}'"
 }
