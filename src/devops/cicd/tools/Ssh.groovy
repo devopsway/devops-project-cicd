@@ -2,8 +2,8 @@ package devops.cicd.tools
 
 
 
-def getSshKeyPath() {
-    withCredentials([file(credentialsId: 'ssh-key', variable: 'FILE')]) {
+def prepare(credential = "ssh-key") {
+    withCredentials([file(credentialsId: credential, variable: 'FILE')]) {
         def text = readFile(FILE)
         writeFile(file: 'ssh-key', text: text)
     }
@@ -11,6 +11,7 @@ def getSshKeyPath() {
 }
 
 def executeCommand(hostname, command, username = "cicd") {
+    prepare()
     return sh(
         script: "ssh -i ssh-key -o StrictHostKeyChecking=no ${username}@${hostname} -- ${command}",
         returnStdout: true
