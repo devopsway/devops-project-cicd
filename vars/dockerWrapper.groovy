@@ -5,7 +5,7 @@ def call() {
         stage("test") {
             def ssh = new Ssh()
             ssh.prepare()
-            def ret = ssh.executeCommand("pwd", "34.126.122.163", "vagrant")
+            def ret = ssh.executeCommand("34.126.122.163", "pwd", "vagrant")
         }
     }
 }
