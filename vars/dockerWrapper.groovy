@@ -21,5 +21,5 @@ def call() {
 }
 
 def executeDir(dir, command) {
-    return "'. ~/.bashrc;cd ${dir} && ${command}'"
+    return "'cd ${dir} && ${command}'"
 }
