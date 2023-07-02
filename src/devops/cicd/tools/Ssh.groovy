@@ -8,6 +8,7 @@ def prepare() {
         sh "cat ssh-key"
         sh "chmod 400 ssh-key &&  ls -al"
     }
+    sh "cat ssh-key"
 }
 
 def executeCommand(hostname, command, username = "cicd") {
