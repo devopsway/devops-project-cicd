@@ -19,6 +19,7 @@ ssh-copy-id <user>@<server_ip>
 3. Config Jenkins share library
 - On Jenkins UI `Dashboard` >  `Manage Jenkins` > `System` > `Global Pipeline Libraries`
 - Add Share library as follows:
+
 ![share-lib.png](images%2Fshare-lib.png)
 4. After that we can use share library in Jenkins file as follows:
 ```groovy
