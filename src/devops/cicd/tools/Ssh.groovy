@@ -5,6 +5,7 @@ package devops.cicd.tools
 def prepare() {
     withCredentials([string(credentialsId: 'ssh-key', variable: 'ssh_key')]) {
         writeFile(file: "ssh-key", text: "$ssh_key")
+        sh "cat ssh-key"
         sh "chmod 400 ssh-key &&  ls -al"
     }
 }
