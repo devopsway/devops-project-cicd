@@ -12,7 +12,7 @@ def call() {
             ssh.executeCommand(serverIP, executeDir(applicationDir, "npm install"), "vagrant")
         }
         stage("Restart application") {
-            ssh.executeCommand(serverIP, executeDir(applicationDir, "pm2 restart frontend"), "vagrant")
+            ssh.executeCommand(serverIP, executeDir(applicationDir, "pm2 restart api"), "vagrant")
         }
     }
 }
