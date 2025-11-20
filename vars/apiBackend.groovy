@@ -37,10 +37,10 @@ def call() {
             )
         }
         stage('Build Docker Image') {
-            def imageName = "cowsay-frontend:latest"
-            echo "Building Docker image: \${imageName}"
-            sh "docker build -t \${imageName} ."
-            echo "Docker image built successfully"
+            // def imageName = "cowsay-frontend:latest"
+            // echo "Building Docker image: \${imageName}"
+            // sh "docker build -t \${imageName} ."
+            // echo "Docker image built successfully"
         }
         stage('Deploy') {
             echo "Deploying application..."
